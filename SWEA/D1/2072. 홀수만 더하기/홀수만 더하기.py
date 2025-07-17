@@ -1,9 +1,7 @@
-n = int(input())
-for i in range(1, n+1):
+T = int(input())
+for test_case in range(1, T + 1):
     arr = list(map(int, input().split()))
-    s = 0
-    for a in arr:
-        if a % 2 != 0:
-            s += a
-    print('#', end='')
-    print(i, s)
+    rtn = 0
+    for v in arr:
+        rtn += v if v % 2 != 0 else 0
+    print(f'#{test_case} {rtn}')
